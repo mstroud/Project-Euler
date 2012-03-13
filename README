@@ -1,1 +1,12 @@
 My Project Euler programs are getting scattered around. This project is meant to unify them in one project.
+
+Usage is...
+
+./ProjectEuler #
+
+...where # is the project number to run.
+
+TODO:
+Allow selecting project number via command line argument: DONE
+Create collection of functions common to PE projects: TBD
+Find a way to time how long projects take to run: TBD
