@@ -24,6 +24,9 @@ int main(int argc, char *argv[])
                     case 2:
                         PE2main();
                         break;
+                    case 3:
+                        PE3main();
+                        break;
                     default:
                         printf("Project %i not found.\n", ProjectNumber);
                         break;
