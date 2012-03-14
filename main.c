@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "projects.h"
+#include "ProjectEuler.h"
 
 int main(int argc, char *argv[])
 {
-    //Usage will ProjectEuler N, where N is the problem number to run
+    /* Usage will ProjectEuler N, where N is the problem number to run */
 
     int ProjectNumber = 0;
     if (argc != 2)

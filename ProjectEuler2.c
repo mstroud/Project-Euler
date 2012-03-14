@@ -1,4 +1,5 @@
-//Project Euler Problem 2
+/* Project Euler Problem 2 */
+#include "ProjectEuler.h"
 
 int iseven (int number)
     {
@@ -27,7 +28,7 @@ int PE2main()
         if(iseven(next))
             totaleven = totaleven + next;
 
-        //printf ("Currently at: %i\n", current);
+        /*printf ("Currently at: %i\n", current);*/
     }
 
     printf("Total: %i\n", totaleven);

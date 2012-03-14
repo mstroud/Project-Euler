@@ -1,4 +1,5 @@
-//Project Euler Problem 1
+/* Project Euler Problem 1 */
+#include "ProjectEuler.h"
 
 int multiple_of_three_or_five (int number)
 {
