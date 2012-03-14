@@ -1,40 +1,42 @@
+#include "ProjectEuler.h"
+#include <stdint.h>
 #include <math.h>
 
-#define NUMBER 600851475143
+#define DEBUG  1
+#define NUMBER 600851475143ULL
 
-int IsPrime(unsigned long int);
+int largestprimefactorof(uint64_t, uint64_t);
+
+/*----------------------------------------*/
+/* Find the largest prime factor of 'num' */
+/* starting at integer 'start'            */
+/*----------------------------------------*/
+int largestprimefactorof(uint64_t num, uint64_t start) {
+  uint64_t j, root = (uint64_t)sqrt((double)num);
+
+  if(DEBUG) printf("largestprimefactorof(%12lld,%6lld), ", num, start); 
+  if(DEBUG) printf("sqrt(%lld)=%lld\n",num,root);
+
+  /* Start loop at last factor (since all smaller factors */
+  /* have already been found). Find the next smallest factor, */
+  /* divide it out, and recurse. */
+  for(j=start;j<=root;j++) {
+    if( num % j == 0 )
+      return largestprimefactorof(num/j,j);
+  }
+  /* No factors smaller than the square root? */
+  /* This bitch be prime! */
+  return num;
+}
 
 int PE3main()
 {
-    unsigned long int x = 1;
-    unsigned int largestprime = 42;
-    int y;
+    uint64_t y;
+    uint64_t num = NUMBER;
+ 
+    /* Find the largest prime factor, starting with 2 */
+    y = largestprimefactorof(num,2);
+    printf("--\nLargest Prime Factor of '%lld' is '%lld'\n",num,y);
 
-    for (x = 1; x <= sqrt(NUMBER); x++)
-        {
-            //printf("Testing %li \n", x);
-
-            if ((NUMBER % x) == 0)
-                if ((y = IsPrime(x)))
-                    largestprime = x;
-        }
-
-    printf("Largest prime is: %i\n", largestprime);
     return 0;
-}
-
-int IsPrime(unsigned long int x)
-{
-    int index;
-
-    if (x % 2 == 0) {return 0;}
-
-    for (index = 3; index < x; index++)
-        {
-            if ((x % index) == 0)
-            {
-                return 0;
-            }
-        }
-    return 1;
 }
