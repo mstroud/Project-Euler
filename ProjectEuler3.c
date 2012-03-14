@@ -1,4 +1,5 @@
 #include <math.h>
+#include "ProjectEuler.h"
 
 #define NUMBER 600851475143
 
