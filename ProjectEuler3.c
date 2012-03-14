@@ -1,6 +1,7 @@
 #include "ProjectEuler.h"
 #include <stdint.h>
 #include <math.h>
+#include "ProjectEuler.h"
 
 #define DEBUG  1
 #define NUMBER 600851475143ULL
