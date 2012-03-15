@@ -13,7 +13,7 @@ int ispalindrome(int test)
     //move the string to something we want untouched
     strcpy(willkeep, willflip);
     //strrev does what you'd think
-    //strrev (willflip);
+    reversestring(willflip);
     //strcmp returns 0 if equal
     compare = strcmp (willkeep, willflip);
 
@@ -23,6 +23,30 @@ int ispalindrome(int test)
         return 0;
 
 }
+
+void reversestring(char *reversable)
+    {
+        //If it's just one character then nothing to do
+        if (sizeof(reversable) == 1) {return;}
+
+        int stringsize = strlen(reversable);
+
+        char *strtmp = (char *)malloc(stringsize + 1);
+
+        if (strtmp == NULL) {return;}
+
+        sprintf(strtmp, "%s", reversable);
+
+        int count = 0;
+
+        while (count < stringsize)
+            {
+                reversable[count] = strtmp[(stringsize - 1) - count];
+                count++;
+            }
+
+        return;
+    }
 
 int PE4main()
 {
@@ -44,7 +68,7 @@ int PE4main()
                 }
         }
 
-    printf("Largest palindrome is %i", largest_palindrome);
+    printf("Largest palindrome is %i\n", largest_palindrome);
 
     return 0;
 }
