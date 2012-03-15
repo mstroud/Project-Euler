@@ -9,7 +9,7 @@ int iseven (int number)
             return 0;
     }
 
-int PE2main()
+int PE2main(pe_data_t *pedata)
 {
     unsigned int next = 0;
     unsigned int current = 1, last = 0, totaleven = 0;
@@ -31,6 +31,7 @@ int PE2main()
         /*printf ("Currently at: %i\n", current);*/
     }
 
-    printf("Total: %i\n", totaleven);
+    if (pedata->verbosity > 0) printf("Total: %i\n", totaleven);
+    sprintf(pedata->result,"%i",totaleven);
     return 0;
 }

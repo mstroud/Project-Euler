@@ -10,7 +10,7 @@ int multiple_of_three_or_five (int number)
 }
 
 
-int PE1main()
+int PE1main(pe_data_t *pedata)
 {
     int total = 0, index = 1, condition = 0;
 
@@ -23,6 +23,8 @@ int PE1main()
                 total = total + index;
         }
 
-    printf ("Total: %i\n", total);
+    if (pedata->verbosity > 0) printf ("Total: %i\n", total);
+    sprintf(pedata->result,"%i",total);
+
     return 0;
 }

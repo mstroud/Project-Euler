@@ -9,8 +9,8 @@ PROGRAM = ProjectEuler
 C_FILES := $(wildcard *.c)
 OBJS := $(patsubst %.c, %.o, $(C_FILES))
 CC = cc
-CFLAGS = -Wall -pedantic 
-LDFLAGS =
+CFLAGS = -Wall -pedantic -std=c99
+LDFLAGS = -lm
  
 all: $(PROGRAM)
  

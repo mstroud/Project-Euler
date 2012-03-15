@@ -5,7 +5,7 @@
 
 int IsPrime(unsigned long int);
 
-int PE3main()
+int PE3main(pe_data_t *pedata)
 {
     unsigned long int x = 1;
     unsigned int largestprime = 42;
@@ -20,7 +20,9 @@ int PE3main()
                     largestprime = x;
         }
 
-    printf("Largest prime is: %i\n", largestprime);
+    if (pedata->verbosity > 0) printf("Largest prime is: %i\n", largestprime);
+    sprintf(pedata->result,"%u",largestprime);
+
     return 0;
 }
 

@@ -6,8 +6,28 @@ Usage is...
 
 ...where # is the project number to run.
 
-TODO:
+--------
+- API: -
+--------
+Problem solutions share the following function prototype:
+
+  int PExmain(pe_data_t*);
+
+'pe_data_t' is an extendable data structure that holds (among other things) a
+string ('result') where the solution may return its answer. 
+
+The solution functions are indexed using an array of function pointers, 'PE_func_table'.
+
+The answer key is stored in a similarly indexed array of string results, 'PE_answer_table'.
+
+The output result of each solution is checked against the answer key at each run and
+"PASS" or "FAIL" status is reported for matches and mis-matches, respectively.
+
+---------
+- TODO: -
+---------
 Allow selecting project number via command line argument: DONE
+Standarize calling interface for solutions for modularity: DONE
 Create collection of functions common to PE projects: TBD
 Find a way to time how long projects take to run: TBD
 

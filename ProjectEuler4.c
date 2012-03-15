@@ -48,7 +48,7 @@ void reversestring(char *reversable)
         return;
     }
 
-int PE4main()
+int PE4main(pe_data_t *pedata)
 {
     int largest_palindrome = 0, temp = 0;
     int x, y, total;
@@ -68,7 +68,8 @@ int PE4main()
                 }
         }
 
-    printf("Largest palindrome is %i\n", largest_palindrome);
+    if (pedata->verbosity > 0) printf("Largest palindrome is %i\n", largest_palindrome);
+    sprintf(pedata->result,"%i",largest_palindrome);
 
     return 0;
 }
