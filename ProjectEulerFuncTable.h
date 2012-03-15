@@ -8,7 +8,9 @@ int (* const PE_func_table[NUM_PROBLEMS+1])(pe_data_t*) = {
     NULL,
     PE1main,
     PE2main,
-    PE3main
+    PE3main,
+    NULL,
+    PE5main
 };
 
 #endif

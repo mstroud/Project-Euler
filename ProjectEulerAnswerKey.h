@@ -8,7 +8,9 @@ const char* PE_answer_table[NUM_PROBLEMS+1] = {
     "0",
     "233168",
     "4613732",
-    "6857"
+    "6857",
+    "906609",
+    "232792560"
 };
 
 #endif
