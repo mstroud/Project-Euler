@@ -14,7 +14,7 @@ int PE2main(pe_data_t *pedata)
     unsigned int next = 0;
     unsigned int current = 1, last = 0, totaleven = 0;
 
-    if (pedata->verbosity > 0) printf("  Running Project Euler Problem 2...\n");
+    printf("Running Project Euler Problem 2\n");
     while (1)
     {
 
@@ -28,10 +28,10 @@ int PE2main(pe_data_t *pedata)
         if(iseven(next))
             totaleven = totaleven + next;
 
-        if (pedata->verbosity > 1) printf ("    Currently at: %i\n", current);
+        /*printf ("Currently at: %i\n", current);*/
     }
 
-    if (pedata->verbosity > 0) printf("  Total: %i\n", totaleven);
-    sprintf(pedata->result,"%u",totaleven);
+    if (pedata->verbosity > 0) printf("Total: %i\n", totaleven);
+    sprintf(pedata->result,"%i",totaleven);
     return 0;
 }

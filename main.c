@@ -24,13 +24,13 @@ int main(int argc, char *argv[])
         {
             // Configure parameters
             ProblemNumber    = atoi(argv[1]);
-            pedata.verbosity = 0 ; // change to > 0 for verbose outputs
+            pedata.verbosity = 1 ; // change to > 0 for verbose outputs
 
             // Check and run solution
             if ( ProblemNumber == 0)
                 run_all(&pedata);
             else if (ProblemNumber <= NUM_PROBLEMS)
-                run_solution(&pedata,ProblemNumber);                                                                        
+                run_solution(&pedata,ProblemNumber);
             else
                 printf("Problem #%03d not found.\n", ProblemNumber);
 
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 }
 
 /* Run a single solution */
-int run_solution(pe_data_t* pedata, int ProblemNumber) 
+int run_solution(pe_data_t* pedata, int ProblemNumber)
 {
     int SolutionStatus = 0;
     int SolutionError  = 0;
@@ -67,15 +67,15 @@ int run_solution(pe_data_t* pedata, int ProblemNumber)
         {
             printf("Problem #%03d solution not implemented.\n", ProblemNumber);
         }
- 
+
      return SolutionStatus ;
 }
 
 /* Run all solutions */
-int run_all(pe_data_t* pedata) 
+int run_all(pe_data_t* pedata)
 {
-    for(int i=1;i<=NUM_PROBLEMS;i++) 
+    for(int i=1;i<=NUM_PROBLEMS;i++)
         run_solution(pedata,i);
-   
+
     return 0;
 }
