@@ -1,20 +1,30 @@
-/* Project Euler problem 1 */
+/* Project Euler Problem 1 */
 #include "ProjectEuler.h"
 
-int PE1main(pe_data_t* pedata)
+int multiple_of_three_or_five (int number)
 {
-    /* Sum all multiples of 3 or 5 below 1000 */
-    /* And, make sure not to count multiples of BOTH 3 and 5 twice! */
-    unsigned int limit = 1000;
-    unsigned int L     = (limit-1)/3;
-    unsigned int M     = (limit-1)/5;
-    unsigned int N     = (limit-1)/15;
-    unsigned int total = ( 3*(L*(L+1)) + 
-                           5*(M*(M+1)) - 
-                          15*(N*(N+1))   )/2;
+    if (((number % 3) && (number % 5)) == 0)
+        return 1;
+    else
+        return 0;
+}
 
-    // Report results
-    if (pedata->verbosity > 0) printf ("L: %u M: %u N: %u Total: %i\n", L,M,N,total);
-    sprintf(pedata->result,"%u",total);
+
+int PE1main(pe_data_t *pedata)
+{
+    int total = 0, index = 1, condition = 0;
+
+    printf("Running Project Euler Problem 1\n");
+    for (index = 1; index < 1000; index++)
+        {
+            condition = multiple_of_three_or_five (index);
+
+            if (condition == 1)
+                total = total + index;
+        }
+
+    if (pedata->verbosity > 0) printf ("Total: %i\n", total);
+    sprintf(pedata->result,"%i",total);
+
     return 0;
 }
