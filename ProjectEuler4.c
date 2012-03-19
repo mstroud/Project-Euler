@@ -1,5 +1,8 @@
 #include "ProjectEuler.h"
 
+int ispalindrome(int);
+void reversestring(char *);
+
 int ispalindrome(int test)
 {
     char willflip[15];
