@@ -23,7 +23,7 @@ int largestproduct (char *numbers)
 int PE8main (pe_data_t *pedata)
 {
     int answer = largestproduct(numbers);
-    if (pedata->verbosity > 0) {printf("%i\n", answer);}
+    if (pedata->verbosity > 0) printf("%i\n", answer);
     sprintf(pedata->result, "%i", answer);
     return 0;
 }
