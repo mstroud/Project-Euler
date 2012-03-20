@@ -6,7 +6,7 @@
 #define __ProjectEulerH
 
 // PE defines
-#define NUM_PROBLEMS 6
+#define NUM_PROBLEMS 8
 
 // PE data structures
 typedef struct {
@@ -22,5 +22,6 @@ int PE4main(pe_data_t*);
 int PE5main(pe_data_t*);
 int PE6main(pe_data_t*);
 //int PE7main(pe_data_t*);
+int PE8main(pe_data_t*);
 
 #endif
