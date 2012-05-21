@@ -24,23 +24,3 @@ int PE7main(pe_data_t *pedata)
     }
   return 0;
 }
-
-/* int IsPrime(unsigned long int x) */
-/* { */
-/*   int index; */
-
-/*   if (x % 2 == 0) */
-/*     { */
-/*       return 0; */
-/*     } */
-
-/*   for (index = 3; index < x; index++) */
-/*     { */
-/*       if ((x % index) == 0) */
-/* 	{ */
-/* 	  return 0; */
-/* 	} */
-/*     } */
-  
-/*   return 1; */
-/* } */
