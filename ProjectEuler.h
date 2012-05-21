@@ -21,7 +21,7 @@ int PE3main(pe_data_t*);
 int PE4main(pe_data_t*);
 int PE5main(pe_data_t*);
 int PE6main(pe_data_t*);
-//int PE7main(pe_data_t*);
+int PE7main(pe_data_t*);
 int PE8main(pe_data_t*);
 
 #endif
