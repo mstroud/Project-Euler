@@ -13,7 +13,8 @@ const char* PE_answer_table[NUM_PROBLEMS+1] = {
     "232792560",
     "25164150",
     "104743",
-    "40824"
+    "40824",
+    "31875000"
 };
 
 #endif
