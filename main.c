@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
         {
             // Configure parameters
             ProblemNumber    = atoi(argv[1]);
-            pedata.verbosity = 1 ; // change to > 0 for verbose outputs
+            pedata.verbosity = 0 ; // change to > 0 for verbose outputs
 
             // Check and run solution
             if ( ProblemNumber == 0)
